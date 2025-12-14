@@ -12,12 +12,11 @@ export default function ServiceDetail() {
 
   return (
     <div className="service-detail">
-      <Link to="/services" className="back-link">
-        <span className="back-arrow">←</span> Back to Services
-      </Link>
+
       
       <div className="hero-section">
         <div className="container">
+          <Link to="/services" className="hero-back-link">← Services</Link>
           <h1>{service.title}</h1>
           <p className="hero-description">{service.shortDescription}</p>
           <div className="hero-meta">

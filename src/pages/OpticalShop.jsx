@@ -14,24 +14,26 @@ export default function OpticalShop() {
   return (
     <div className="optical-shop">
       <div className="container">
-        <div className="page-header">
-          <h1>Optical Shop</h1>
-          <p>Browse our selection of quality frames, lenses, and accessories</p>
-        </div>
+        <div className="shop-content">
+          <div className="filter-section">
+            <div className="filter-header">
+              <span className="filter-label">Filter by:</span>
+              <span className="results-count">{filteredProducts.length} products</span>
+            </div>
+            <div className="filter-chips">
+              {categories.map(category => (
+                <button
+                  key={category}
+                  className={`filter-chip ${selectedCategory === category ? 'active' : ''}`}
+                  onClick={() => setSelectedCategory(category)}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+          </div>
 
-        <div className="filter-bar">
-          {categories.map(category => (
-            <button
-              key={category}
-              className={`filter-btn ${selectedCategory === category ? 'active' : ''}`}
-              onClick={() => setSelectedCategory(category)}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-
-        <div className="products-grid">
+          <div className="products-grid">
           {filteredProducts.map(product => (
             <div key={product.id} className="product-card">
               <div className="product-image">
@@ -49,6 +51,7 @@ export default function OpticalShop() {
               </div>
             </div>
           ))}
+          </div>
         </div>
       </div>
     </div>

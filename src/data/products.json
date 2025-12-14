@@ -81,16 +81,6 @@
   },
   {
     "id": 9,
-    "name": "Monthly Contact Lenses (6 pack)",
-    "category": "Contact Lenses",
-    "price": 49.99,
-    "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400",
-    "description": "Long-lasting monthly replacement contact lenses",
-    "brand": "ClearSight",
-    "inStock": true
-  },
-  {
-    "id": 10,
     "name": "Lens Cleaning Solution (12 oz)",
     "category": "Accessories",
     "price": 12.99,
@@ -100,7 +90,7 @@
     "inStock": true
   },
   {
-    "id": 11,
+    "id": 10,
     "name": "Designer Sunglasses",
     "category": "Sunglasses",
     "price": 229.99,
@@ -109,7 +99,7 @@
     "brand": "ClearSight",
     "inStock": true  },
   {
-    "id": 13,
+    "id": 11,
     "name": "Anti-Glare Screen Protector Glasses",
     "category": "Frames",
     "price": 89.99,
@@ -119,7 +109,7 @@
     "inStock": true
   },
   {
-    "id": 14,
+    "id": 12,
     "name": "Photochromic Adaptive Lenses",
     "category": "Lenses",
     "price": 199.99,
@@ -129,7 +119,7 @@
     "inStock": true
   },
   {
-    "id": 15,
+    "id": 13,
     "name": "Oversized Cat Eye Sunglasses",
     "category": "Sunglasses",
     "price": 189.99,
@@ -139,7 +129,7 @@
     "inStock": true
   },
   {
-    "id": 16,
+    "id": 14,
     "name": "Colored Contact Lenses",
     "category": "Contact Lenses",
     "price": 54.99,
@@ -149,7 +139,7 @@
     "inStock": true
   },
   {
-    "id": 17,
+    "id": 15,
     "name": "Lens Case with Solution Bundle",
     "category": "Accessories",
     "price": 19.99,
@@ -159,7 +149,7 @@
     "inStock": true
   },
   {
-    "id": 18,
+    "id": 16,
     "name": "Titanium Flexible Frame",
     "category": "Frames",
     "price": 219.99,

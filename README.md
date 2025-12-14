@@ -1,6 +1,6 @@
 # Eye Clinic Web App
 
-A portfolio-quality web application for an eye clinic and optical center, built with React, Vite, and Supabase.
+A portfolio web application for an eye clinic and optical center, built with React, Vite, and Supabase.
 
 ## Features
 
@@ -24,36 +24,6 @@ A portfolio-quality web application for an eye clinic and optical center, built 
 - **React Router** - Client-side routing
 - **Supabase** - Backend as a Service (database + authentication)
 - **CSS** - Custom styling (no frameworks)
-
-## Project Structure
-
-```
-src/
-├── components/
-│   ├── layout/          # Header, Footer, Layout
-│   └── auth/            # ProtectedRoute
-├── pages/
-│   ├── Home.jsx
-│   ├── Services.jsx
-│   ├── ServiceDetail.jsx
-│   ├── OpticalShop.jsx
-│   ├── Doctors.jsx
-│   ├── Appointment.jsx
-│   ├── Contact.jsx
-│   └── admin/
-│       ├── AdminLogin.jsx
-│       └── AdminDashboard.jsx
-├── context/
-│   └── AuthContext.jsx  # Authentication context
-├── config/
-│   └── supabaseClient.js
-├── data/
-│   ├── services.json
-│   ├── products.json
-│   └── doctors.json
-├── App.jsx              # Router configuration
-└── main.jsx
-```
 
 ## Setup Instructions
 
@@ -148,7 +118,7 @@ Visit `http://localhost:5173`
 
 ### Admin Routes
 - `/admin/login` - Admin login
-- `/admin/dashboard` - Admin dashboard (protected)
+- `/admin/dashboard` - Admin dashboard
 
 ## Key Features
 

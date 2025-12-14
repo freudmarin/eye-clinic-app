@@ -95,6 +95,24 @@ export default function AdminDashboard() {
     }
   };
 
+  const handleMessageStatusChange = async (messageId, newStatus) => {
+    try {
+      const { error } = await supabase
+        .from('contact_messages')
+        .update({ status: newStatus })
+        .eq('id', messageId);
+      if (error) throw error;
+      setMessages((prev) =>
+        prev.map((m) =>
+          m.id === messageId ? { ...m, status: newStatus } : m
+        )
+      );
+    } catch (err) {
+      alert('Failed to update message status.');
+      console.error(err);
+    }
+  };
+
   if (loading) {
     return (
       <div className="loading-container">
@@ -128,146 +146,159 @@ export default function AdminDashboard() {
           </div>
         )}
 
-        <div className="stats-grid">
-          <div className="stat-card">
-            <div className="stat-icon">📅</div>
-            <div className="stat-info">
-              <h3>{appointments.length}</h3>
-              <p>Total Appointments</p>
+        <div className="dashboard-main">
+          <div className="stats-grid">
+            <div className="stat-card">
+              <div className="stat-icon">📅</div>
+              <div className="stat-info">
+                <h3>{appointments.length}</h3>
+                <p>Total Appointments</p>
+              </div>
+            </div>
+            <div className="stat-card">
+              <div className="stat-icon">⏳</div>
+              <div className="stat-info">
+                <h3>{appointments.filter(a => a.status === 'pending').length}</h3>
+                <p>Pending Appointments</p>
+              </div>
+            </div>
+            <div className="stat-card">
+              <div className="stat-icon">✉️</div>
+              <div className="stat-info">
+                <h3>{messages.length}</h3>
+                <p>Total Messages</p>
+              </div>
+            </div>
+            <div className="stat-card">
+              <div className="stat-icon">📩</div>
+              <div className="stat-info">
+                <h3>{messages.filter(m => m.status === 'unread').length}</h3>
+                <p>Unread Messages</p>
+              </div>
             </div>
           </div>
-          <div className="stat-card">
-            <div className="stat-icon">⏳</div>
-            <div className="stat-info">
-              <h3>{appointments.filter(a => a.status === 'pending').length}</h3>
-              <p>Pending Appointments</p>
-            </div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-icon">✉️</div>
-            <div className="stat-info">
-              <h3>{messages.length}</h3>
-              <p>Total Messages</p>
-            </div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-icon">📩</div>
-            <div className="stat-info">
-              <h3>{messages.filter(m => m.status === 'unread').length}</h3>
-              <p>Unread Messages</p>
-            </div>
-          </div>
-        </div>
 
-        <div className="dashboard-section">
-          <div className="section-header">
-            <h2>Recent Appointments</h2>
-            <button onClick={fetchData} className="btn-refresh">🔄 Refresh</button>
-          </div>
-          
-          {appointments.length === 0 ? (
-            <div className="empty-state">
-              <p>No appointments yet</p>
+          <div className="dashboard-content">
+            <div className="dashboard-section primary">
+              <div className="section-header">
+                <h2>Recent Appointments</h2>
+                <button onClick={fetchData} className="btn-refresh">🔄 Refresh</button>
+              </div>
+            
+            {appointments.length === 0 ? (
+                  <div className="empty-state">
+                    <p>No appointments yet</p>
+                  </div>
+                ) : (
+                  <div className="table-container">
+                    <table className="data-table">
+                      <thead>
+                        <tr>
+                          <th>Date & Time</th>
+                          <th>Patient</th>
+                          <th>Contact</th>
+                          <th>Service</th>
+                          <th>Doctor</th>
+                          <th>Status</th>
+                          <th>Submitted</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {appointments.slice(0, 10).map((appointment) => (
+                          <tr key={appointment.id}>
+                            <td>
+                              <strong>{appointment.appointment_date}</strong><br />
+                              {appointment.appointment_time}
+                            </td>
+                            <td>{appointment.name}</td>
+                            <td>
+                              {appointment.email}<br />
+                              {appointment.phone}
+                            </td>
+                            <td>{appointment.service}</td>
+                            <td>{appointment.preferred_doctor || 'No preference'}</td>
+                            <td>
+                              <span className={`status-badge ${getStatusColor(appointment.status)}`} style={{ marginRight: 8 }}>
+                                {appointment.status || 'pending'}
+                              </span>
+                              <select
+                                value={appointment.status || 'pending'}
+                                onChange={e => handleStatusChange(appointment.id, e.target.value)}
+                                className="status-select"
+                              >
+                                <option value="pending">Pending</option>
+                                <option value="confirmed">Confirmed</option>
+                                <option value="completed">Completed</option>
+                                <option value="cancelled">Cancelled</option>
+                              </select>
+                            </td>
+                            <td>{formatDate(appointment.created_at)}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+              </div>
+            )}
             </div>
-          ) : (
-            <div className="table-container">
-              <table className="data-table">
-                <thead>
-                  <tr>
-                    <th>Date & Time</th>
-                    <th>Patient</th>
-                    <th>Contact</th>
-                    <th>Service</th>
-                    <th>Doctor</th>
-                    <th>Status</th>
-                    <th>Submitted</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {appointments.slice(0, 10).map((appointment) => (
-                    <tr key={appointment.id}>
-                      <td>
-                        <strong>{appointment.appointment_date}</strong><br />
-                        {appointment.appointment_time}
-                      </td>
-                      <td>{appointment.name}</td>
-                      <td>
-                        {appointment.email}<br />
-                        {appointment.phone}
-                      </td>
-                      <td>{appointment.service}</td>
-                      <td>{appointment.preferred_doctor || 'No preference'}</td>
-                      <td>
-                        <span className={`status-badge ${getStatusColor(appointment.status)}`} style={{ marginRight: 8 }}>
-                          {appointment.status || 'pending'}
-                        </span>
-                        <select
-                          value={appointment.status || 'pending'}
-                          onChange={e => handleStatusChange(appointment.id, e.target.value)}
-                          className="status-select"
-                        >
-                          <option value="pending">Pending</option>
-                          <option value="confirmed">Confirmed</option>
-                          <option value="completed">Completed</option>
-                          <option value="cancelled">Cancelled</option>
-                        </select>
-                      </td>
-                      <td>{formatDate(appointment.created_at)}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          )}
-        </div>
 
-        <div className="dashboard-section">
-          <div className="section-header">
-            <h2>Recent Messages</h2>
+            <div className="dashboard-section secondary">
+              <div className="section-header">
+                <h2>Recent Messages</h2>
+              </div>
+              
+              {messages.length === 0 ? (
+                <div className="empty-state">
+                  <p>No messages yet</p>
+                </div>
+              ) : (
+                <div className="table-container">
+                  <table className="data-table">
+                    <thead>
+                      <tr>
+                        <th>From</th>
+                        <th>Contact</th>
+                        <th>Subject</th>
+                        <th>Message</th>
+                        <th>Status</th>
+                        <th>Received</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {messages.slice(0, 10).map((message) => (
+                        <tr key={message.id}>
+                          <td>{message.name}</td>
+                          <td>
+                            {message.email}<br />
+                            {message.phone}
+                          </td>
+                          <td>{message.subject}</td>
+                          <td className="message-preview">
+                            {message.message.substring(0, 100)}
+                            {message.message.length > 100 && '...'}
+                          </td>
+                          <td>
+                            <span className={`status-badge ${getStatusColor(message.status)}`}>
+                              {message.status || 'unread'}
+                            </span>
+                            <select
+                              value={message.status || 'unread'}
+                              onChange={e => handleMessageStatusChange(message.id, e.target.value)}
+                              className="status-select"
+                              style={{ marginTop: '0.25rem' }}
+                            >
+                              <option value="unread">Unread</option>
+                              <option value="read">Read</option>
+                            </select>
+                          </td>
+                          <td>{formatDate(message.created_at)}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+            </div>
           </div>
-          
-          {messages.length === 0 ? (
-            <div className="empty-state">
-              <p>No messages yet</p>
-            </div>
-          ) : (
-            <div className="table-container">
-              <table className="data-table">
-                <thead>
-                  <tr>
-                    <th>From</th>
-                    <th>Contact</th>
-                    <th>Subject</th>
-                    <th>Message</th>
-                    <th>Status</th>
-                    <th>Received</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {messages.slice(0, 10).map((message) => (
-                    <tr key={message.id}>
-                      <td>{message.name}</td>
-                      <td>
-                        {message.email}<br />
-                        {message.phone}
-                      </td>
-                      <td>{message.subject}</td>
-                      <td className="message-preview">
-                        {message.message.substring(0, 100)}
-                        {message.message.length > 100 && '...'}
-                      </td>
-                      <td>
-                        <span className={`status-badge ${getStatusColor(message.status)}`}>
-                          {message.status || 'unread'}
-                        </span>
-                      </td>
-                      <td>{formatDate(message.created_at)}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          )}
         </div>
       </div>
     </div>

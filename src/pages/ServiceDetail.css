@@ -9,27 +9,24 @@
   padding: 0 2rem;
 }
 
-.back-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #0f766e;
+
+/* Subtle hero back link */
+.hero-back-link {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: rgba(255,255,255,0.85);
   text-decoration: none;
-  padding: 1rem 2rem;
-  font-weight: 600;
-  transition: all 0.3s;
-  background-color: white;
-  border-radius: 0 0 12px 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: color 0.2s;
+  opacity: 0.95;
 }
-
-.back-link:hover {
-  color: #14b8a6;
-  transform: translateX(-5px);
-}
-
-.back-arrow {
-  font-size: 1.25rem;
+.hero-back-link:hover,
+.hero-back-link:focus {
+  color: #fff;
+  text-decoration: underline;
+  opacity: 1;
 }
 
 .hero-section {

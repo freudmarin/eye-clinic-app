@@ -8,48 +8,82 @@
   padding: 0 2rem;
 }
 
-.page-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
+/* Header removed: page header styles are no longer needed */
 
-.page-header h1 {
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 0.5rem;
-}
-
-.page-header p {
-  font-size: 1.25rem;
-  color: #666;
-}
-
-.filter-bar {
+/* Shop Content Layout */
+.shop-content {
   display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 2.5rem;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
 }
 
-.filter-btn {
-  padding: 0.5rem 1.5rem;
-  border: 2px solid #0f766e;
+/* Filter Section */
+.filter-section {
+  background: white;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 80px;
+  z-index: 10;
+  border: 1px solid #e8f5f4;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filter-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0f766e;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.results-count {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.filter-chips {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.filter-chip {
+  padding: 0.5rem 1.25rem;
+  border: 1px solid #d0e8e6;
   background-color: white;
   color: #0f766e;
-  border-radius: 25px;
+  border-radius: 20px;
   cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
-.filter-btn:hover {
-  background-color: #f0f0f0;
+.filter-chip:hover {
+  background-color: #f0f9f8;
+  border-color: #0f766e;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(15, 118, 110, 0.15);
 }
 
-.filter-btn.active {
+.filter-chip.active {
   background-color: #0f766e;
   color: white;
+  border-color: #0f766e;
+  box-shadow: 0 2px 8px rgba(15, 118, 110, 0.3);
 }
 
 .products-grid {
@@ -148,11 +182,41 @@
 }
 
 @media (max-width: 768px) {
-  .products-grid {
-    grid-template-columns: 1fr;
-  }
-  
   .page-header h1 {
     font-size: 2rem;
+  }
+
+  .page-header p {
+    font-size: 1.1rem;
+  }
+
+  .filter-section {
+    position: static;
+    padding: 1rem;
+  }
+
+  .filter-header {
+    margin-bottom: 0.75rem;
+  }
+
+  .filter-label {
+    font-size: 0.85rem;
+  }
+
+  .results-count {
+    font-size: 0.85rem;
+  }
+
+  .filter-chips {
+    gap: 0.5rem;
+  }
+
+  .filter-chip {
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
   }
 }

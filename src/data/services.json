@@ -1,0 +1,103 @@
+[
+  {
+    "id": 1,
+    "slug": "comprehensive-eye-exam",
+    "title": "Comprehensive Eye Exam",
+    "shortDescription": "Complete eye health evaluation and vision testing",
+    "description": "Our comprehensive eye exam includes a thorough evaluation of your eye health and visual system. We check for common eye diseases, assess your vision, and ensure your eyes are functioning properly.",
+    "duration": "45-60 minutes",
+    "price": "$120",
+    "features": [
+      "Visual acuity testing",
+      "Refraction assessment",
+      "Eye pressure measurement",
+      "Retinal examination",
+      "Peripheral vision testing",
+      "Eye muscle function evaluation"
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "contact-lens-fitting",
+    "title": "Contact Lens Fitting",
+    "shortDescription": "Professional fitting and consultation for contact lenses",
+    "description": "Get professionally fitted for contact lenses that match your lifestyle and vision needs. We offer a wide range of contact lens options including daily, weekly, monthly, and specialty lenses.",
+    "duration": "60 minutes",
+    "price": "$150",
+    "features": [
+      "Corneal measurements",
+      "Lens selection and trial",
+      "Proper insertion and removal training",
+      "Care and maintenance instruction",
+      "Follow-up visits included"
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "pediatric-eye-care",
+    "title": "Pediatric Eye Care",
+    "shortDescription": "Specialized eye care for children and adolescents",
+    "description": "Our pediatric eye care services are designed to make children feel comfortable while ensuring their vision develops properly. Early detection of vision problems is crucial for academic success.",
+    "duration": "30-45 minutes",
+    "price": "$100",
+    "features": [
+      "Child-friendly examination techniques",
+      "Vision screening for learning",
+      "Amblyopia (lazy eye) detection",
+      "Color vision testing",
+      "Eye coordination assessment",
+      "Parent education and guidance"
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "glaucoma-screening",
+    "title": "Glaucoma Screening",
+    "shortDescription": "Early detection and monitoring of glaucoma",
+    "description": "Glaucoma is a leading cause of blindness but can be managed effectively when detected early. Our advanced screening techniques help identify risk factors and early signs of glaucoma.",
+    "duration": "30 minutes",
+    "price": "$85",
+    "features": [
+      "Intraocular pressure measurement",
+      "Optic nerve evaluation",
+      "Visual field testing",
+      "Corneal thickness measurement",
+      "Family history assessment",
+      "Risk factor evaluation"
+    ]
+  },
+  {
+    "id": 5,
+    "slug": "diabetic-eye-exam",
+    "title": "Diabetic Eye Exam",
+    "shortDescription": "Specialized screening for diabetes-related eye complications",
+    "description": "Diabetes can affect your eyes in various ways. Our diabetic eye exam focuses on detecting and managing diabetic retinopathy and other diabetes-related eye conditions.",
+    "duration": "45 minutes",
+    "price": "$140",
+    "features": [
+      "Dilated retinal examination",
+      "Macular assessment",
+      "Blood vessel evaluation",
+      "Retinal photography",
+      "Early intervention strategies",
+      "Coordination with your healthcare team"
+    ]
+  },
+  {
+    "id": 6,
+    "slug": "dry-eye-treatment",
+    "title": "Dry Eye Treatment",
+    "shortDescription": "Diagnosis and treatment for chronic dry eye syndrome",
+    "description": "Dry eye syndrome can significantly impact your quality of life. We offer comprehensive evaluation and customized treatment plans to provide relief and improve eye comfort.",
+    "duration": "30 minutes",
+    "price": "$95",
+    "features": [
+      "Tear film analysis",
+      "Meibomian gland evaluation",
+      "Prescription eye drop recommendations",
+      "Lifestyle modification advice",
+      "Advanced treatment options",
+      "Follow-up care plan"
+    ]
+  }
+]

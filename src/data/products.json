@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "name": "Classic Aviator Frame",
+    "category": "Frames",
+    "price": 129.99,
+    "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400",
+    "description": "Timeless aviator design with durable metal frame",
+    "brand": "ClearSight",
+    "inStock": true
+  },
+  {
+    "id": 2,
+    "name": "Modern Rectangle Frame",
+    "category": "Frames",
+    "price": 149.99,
+    "image": "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=400",
+    "description": "Contemporary rectangular acetate frame in multiple colors",
+    "brand": "ClearSight",
+    "inStock": true
+  },
+  {
+    "id": 3,
+    "name": "Designer Cat-Eye Frame",
+    "category": "Frames",
+    "price": 189.99,
+    "image": "https://images.unsplash.com/photo-1509695507497-903c140c43b0?w=400",
+    "description": "Elegant cat-eye design for a sophisticated look",
+    "brand": "ClearSight",
+    "inStock": true
+  },
+  {
+    "id": 4,
+    "name": "Sports Performance Frame",
+    "category": "Frames",
+    "price": 169.99,
+    "image": "https://images.unsplash.com/photo-1577803645773-f96470509666?w=400",
+    "description": "Lightweight, flexible frame designed for active lifestyles",
+    "brand": "ClearSight",
+    "inStock": true
+  },
+  {
+    "id": 5,
+    "name": "Blue Light Blocking Lenses",
+    "category": "Lenses",
+    "price": 79.99,
+    "image": "https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=400",
+    "description": "Reduce eye strain from digital screens",
+    "brand": "ClearSight",
+    "inStock": true
+  },
+  {
+    "id": 6,
+    "name": "Progressive Lenses",
+    "category": "Lenses",
+    "price": 249.99,
+    "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400",
+    "description": "Seamless multifocal lenses for all distances",
+    "brand": "ClearSight",
+    "inStock": true
+  },
+  {
+    "id": 7,
+    "name": "Polarized Sun Lenses",
+    "category": "Lenses",
+    "price": 159.99,
+    "image": "https://images.unsplash.com/photo-1556306535-0f09a537f0a3?w=400",
+    "description": "Premium polarized lenses for glare reduction",
+    "brand": "ClearSight",
+    "inStock": true
+  },
+  {
+    "id": 8,
+    "name": "Daily Disposable Contacts (30 pack)",
+    "category": "Contact Lenses",
+    "price": 34.99,
+    "image": "https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=400",
+    "description": "Fresh, comfortable lenses every day",
+    "brand": "ClearSight",
+    "inStock": true
+  },
+  {
+    "id": 9,
+    "name": "Monthly Contact Lenses (6 pack)",
+    "category": "Contact Lenses",
+    "price": 49.99,
+    "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400",
+    "description": "Long-lasting monthly replacement contact lenses",
+    "brand": "ClearSight",
+    "inStock": true
+  },
+  {
+    "id": 10,
+    "name": "Lens Cleaning Solution (12 oz)",
+    "category": "Accessories",
+    "price": 12.99,
+    "image": "https://images.unsplash.com/photo-1585421514738-01798e348b17?w=400",
+    "description": "Professional-grade cleaning solution for all lenses",
+    "brand": "ClearSight",
+    "inStock": true
+  },
+  {
+    "id": 11,
+    "name": "Designer Sunglasses",
+    "category": "Sunglasses",
+    "price": 229.99,
+    "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400",
+    "description": "UV400 protection with premium polarized lenses",
+    "brand": "ClearSight",
+    "inStock": true  },
+  {
+    "id": 13,
+    "name": "Anti-Glare Screen Protector Glasses",
+    "category": "Frames",
+    "price": 89.99,
+    "image": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400",
+    "description": "Modern frames with anti-glare coating for screen time",
+    "brand": "ClearSight",
+    "inStock": true
+  },
+  {
+    "id": 14,
+    "name": "Photochromic Adaptive Lenses",
+    "category": "Lenses",
+    "price": 199.99,
+    "image": "https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=400",
+    "description": "Lenses that adapt to light conditions automatically",
+    "brand": "ClearSight",
+    "inStock": true
+  },
+  {
+    "id": 15,
+    "name": "Oversized Cat Eye Sunglasses",
+    "category": "Sunglasses",
+    "price": 189.99,
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400",
+    "description": "Bold oversized cat-eye style for maximum UV protection",
+    "brand": "ClearSight",
+    "inStock": true
+  },
+  {
+    "id": 16,
+    "name": "Colored Contact Lenses",
+    "category": "Contact Lenses",
+    "price": 54.99,
+    "image": "https://images.unsplash.com/photo-1574068468668-a05a11f871da?w=400",
+    "description": "Color-enhancing contact lenses for a new look",
+    "brand": "ClearSight",
+    "inStock": true
+  },
+  {
+    "id": 17,
+    "name": "Lens Case with Solution Bundle",
+    "category": "Accessories",
+    "price": 19.99,
+    "image": "https://images.unsplash.com/photo-1585421514738-01798e348b17?w=400",
+    "description": "Complete lens care bundle with case and solution",
+    "brand": "ClearSight",
+    "inStock": true
+  },
+  {
+    "id": 18,
+    "name": "Titanium Flexible Frame",
+    "category": "Frames",
+    "price": 219.99,
+    "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400",
+    "description": "Durable titanium frame with maximum flexibility",
+    "brand": "ClearSight",
+    "inStock": true  }
+]

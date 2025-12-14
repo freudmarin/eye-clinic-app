@@ -1,0 +1,59 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Sarah Mitchell",
+    "title": "Optometrist, OD",
+    "specialization": "Comprehensive Eye Care & Contact Lenses",
+    "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400",
+    "bio": "Dr. Mitchell has over 15 years of experience in optometry with a special focus on contact lens fitting and pediatric eye care. She graduated from the New England College of Optometry and is passionate about helping patients achieve optimal vision.",
+    "education": [
+      "Doctor of Optometry - New England College of Optometry",
+      "Bachelor of Science in Biology - Boston University"
+    ],
+    "languages": ["English", "Spanish"],
+    "availability": ["Monday", "Tuesday", "Thursday", "Friday"]
+  },
+  {
+    "id": 2,
+    "name": "Dr. Michael Chen",
+    "title": "Ophthalmologist, MD",
+    "specialization": "Cataract Surgery & Glaucoma Management",
+    "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400",
+    "bio": "Dr. Chen is a board-certified ophthalmologist specializing in cataract surgery and glaucoma treatment. With over 20 years of surgical experience, he has performed thousands of successful procedures and is dedicated to preserving and restoring vision.",
+    "education": [
+      "Medical Degree - Johns Hopkins School of Medicine",
+      "Ophthalmology Residency - Massachusetts Eye and Ear",
+      "Fellowship in Glaucoma - Wills Eye Hospital"
+    ],
+    "languages": ["English", "Mandarin"],
+    "availability": ["Wednesday", "Thursday", "Friday"]
+  },
+  {
+    "id": 3,
+    "name": "Dr. Emily Rodriguez",
+    "title": "Optometrist, OD",
+    "specialization": "Pediatric Eye Care & Vision Therapy",
+    "image": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400",
+    "bio": "Dr. Rodriguez specializes in pediatric optometry and vision therapy. She has a gentle approach with children and is experienced in treating learning-related vision problems, amblyopia, and strabismus.",
+    "education": [
+      "Doctor of Optometry - Southern California College of Optometry",
+      "Pediatric Optometry Residency - Cincinnati Children's Hospital"
+    ],
+    "languages": ["English", "Spanish", "Portuguese"],
+    "availability": ["Monday", "Tuesday", "Wednesday", "Saturday"]
+  },
+  {
+    "id": 4,
+    "name": "Dr. James Patterson",
+    "title": "Optometrist, OD",
+    "specialization": "Dry Eye & Specialty Contact Lenses",
+    "image": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400",
+    "bio": "Dr. Patterson is an expert in managing dry eye syndrome and fitting specialty contact lenses including scleral lenses for keratoconus and post-surgical patients. He stays at the forefront of new treatments and technologies.",
+    "education": [
+      "Doctor of Optometry - Pacific University College of Optometry",
+      "Fellowship in Specialty Contact Lenses"
+    ],
+    "languages": ["English", "French"],
+    "availability": ["Tuesday", "Wednesday", "Thursday", "Friday"]
+  }
+]

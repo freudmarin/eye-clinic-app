@@ -1,11 +1,11 @@
 [
   {
       "id": 1,
-      "name": "Dr. Zara Kim",
+      "name": "Dr. Zara Smith",
       "specialty": "Comprehensive Ophthalmology",
       "bio": "Treats dry eye, blepharitis, and other ocular surface conditions.",
       "phone": "(555) 210-0150",
-      "email": "zara.kim@example.com",
+      "email": "zara.smith@example.com",
       "image": "https://images.unsplash.com/photo-1527613426441-4da17471b66d?auto=format&fit=facearea&w=400&h=400&facepad=2&q=80"  
     },
     {

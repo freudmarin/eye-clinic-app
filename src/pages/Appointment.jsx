@@ -247,10 +247,8 @@ export default function Appointment() {
                 onChange={handleChange}
               >
                 <option value="">No preference</option>
-                <option value="Dr. Sarah Mitchell">Dr. Sarah Mitchell</option>
-                <option value="Dr. Michael Chen">Dr. Michael Chen</option>
-                <option value="Dr. Emily Rodriguez">Dr. Emily Rodriguez</option>
-                <option value="Dr. James Patterson">Dr. James Patterson</option>
+                <option value="Dr. Zara Smith">Dr. Sarah Mitchell</option>
+                <option value="Dr. Adrian Wells">Dr. Michael Chen</option>
               </select>
             </div>
 

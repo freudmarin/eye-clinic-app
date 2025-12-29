@@ -1,10 +1,21 @@
+/* ============================================
+   Layout Component Styles
+   ============================================ */
+
 .layout {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: var(--color-gray-50);
 }
 
 .main-content {
   flex: 1;
-  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Remove default padding for pages that have their own hero sections */
+.main-content > * {
+  flex: 1;
 }

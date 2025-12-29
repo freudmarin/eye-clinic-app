@@ -1,8 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* ============================================
+   App-Level Styles
+   ============================================ */
 
 #root {
   min-height: 100vh;
@@ -10,19 +8,78 @@
   flex-direction: column;
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
+/* Global Link Styles */
 a {
   text-decoration: none;
   color: inherit;
+  transition: color var(--transition-base);
 }
 
+a:hover {
+  color: var(--color-primary);
+}
+
+/* Global Button Reset */
 button {
   font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Image defaults */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* List defaults */
+ul, ol {
+  list-style: none;
+}
+
+/* Form defaults */
+input, select, textarea, button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Remove default fieldset styles */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Global Page Header Style */
+.page-header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.page-header h1 {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-3);
+  letter-spacing: var(--tracking-tight);
+}
+
+.page-header p {
+  font-size: var(--text-xl);
+  color: var(--color-gray-500);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: var(--text-3xl);
+  }
+  
+  .page-header p {
+    font-size: var(--text-lg);
+  }
 }

@@ -4,6 +4,45 @@ import { useEffect, useState } from 'react';
 import { supabase } from '../../config/supabaseClient';
 import './AdminDashboard.css';
 
+/* SVG Icons */
+const CalendarIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+    <line x1="16" y1="2" x2="16" y2="6" />
+    <line x1="8" y1="2" x2="8" y2="6" />
+    <line x1="3" y1="10" x2="21" y2="10" />
+  </svg>
+);
+
+const ClockIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <circle cx="12" cy="12" r="10" />
+    <polyline points="12 6 12 12 16 14" />
+  </svg>
+);
+
+const MailIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+    <polyline points="22,6 12,13 2,6" />
+  </svg>
+);
+
+const InboxIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <polyline points="22 12 16 12 14 15 10 15 8 12 2 12" />
+    <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" />
+  </svg>
+);
+
+const RefreshIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <polyline points="23 4 23 10 17 10" />
+    <polyline points="1 20 1 14 7 14" />
+    <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
+  </svg>
+);
+
 export default function AdminDashboard() {
   const { user, signOut } = useAuth();
   const navigate = useNavigate();
@@ -149,28 +188,36 @@ export default function AdminDashboard() {
         <div className="dashboard-main">
           <div className="stats-grid">
             <div className="stat-card">
-              <div className="stat-icon">📅</div>
+              <div className="stat-icon stat-icon--primary">
+                <CalendarIcon />
+              </div>
               <div className="stat-info">
                 <h3>{appointments.length}</h3>
                 <p>Total Appointments</p>
               </div>
             </div>
             <div className="stat-card">
-              <div className="stat-icon">⏳</div>
+              <div className="stat-icon stat-icon--warning">
+                <ClockIcon />
+              </div>
               <div className="stat-info">
                 <h3>{appointments.filter(a => a.status === 'pending').length}</h3>
                 <p>Pending Appointments</p>
               </div>
             </div>
             <div className="stat-card">
-              <div className="stat-icon">✉️</div>
+              <div className="stat-icon stat-icon--accent">
+                <MailIcon />
+              </div>
               <div className="stat-info">
                 <h3>{messages.length}</h3>
                 <p>Total Messages</p>
               </div>
             </div>
             <div className="stat-card">
-              <div className="stat-icon">📩</div>
+              <div className="stat-icon stat-icon--info">
+                <InboxIcon />
+              </div>
               <div className="stat-info">
                 <h3>{messages.filter(m => m.status === 'unread').length}</h3>
                 <p>Unread Messages</p>
@@ -182,7 +229,10 @@ export default function AdminDashboard() {
             <div className="dashboard-section primary">
               <div className="section-header">
                 <h2>Recent Appointments</h2>
-                <button onClick={fetchData} className="btn-refresh">🔄 Refresh</button>
+                <button onClick={fetchData} className="btn-refresh">
+                  <RefreshIcon />
+                  Refresh
+                </button>
               </div>
             
             {appointments.length === 0 ? (
@@ -304,3 +354,4 @@ export default function AdminDashboard() {
     </div>
   );
 }
+

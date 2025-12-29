@@ -9,8 +9,11 @@ export default function Layout() {
 
   return (
     <div className="layout">
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
       {!isAdminRoute && <Header />}
-      <main className="main-content">
+      <main id="main-content" className="main-content">
         <Outlet />
       </main>
       {!isAdminRoute && <Footer />}

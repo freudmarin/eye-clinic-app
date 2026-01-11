@@ -197,6 +197,7 @@
     transform: translateX(100%);
     transition: transform var(--transition-slow);
     overflow-y: auto;
+    z-index: calc(var(--z-sticky) + 1);
   }
 
   .header__nav--open {
